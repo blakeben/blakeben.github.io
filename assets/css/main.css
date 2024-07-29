@@ -2443,3 +2443,53 @@ input, select, textarea {
 					}
 
 	}
+
+	.projects-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+	
+	.projects-container .row {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+	
+	.projects-container .col-4,
+	.projects-container .col-6-medium,
+	.projects-container .col-12-small {
+		flex: 1 1 48%; /* Make the columns larger */
+		max-width: 48%; /* Ensure the max-width matches the flex-basis */
+		margin: 1%; /* Add some margin between columns */
+	}
+	
+	@media screen and (max-width: 1280px) {
+		.projects-container .col-4,
+		.projects-container .col-6-medium,
+		.projects-container .col-12-small {
+			flex: 1 1 100%;
+			max-width: 100%;
+		}
+	}
+	
+	@media screen and (max-width: 980px) {
+		.projects-container .col-4,
+		.projects-container .col-6-medium,
+		.projects-container .col-12-small {
+			flex: 1 1 90%;
+			max-width: 90%;
+		}
+	}
+	
+	@media screen and (max-width: 736px) {
+		.projects-container .col-4,
+		.projects-container .col-6-medium,
+		.projects-container .col-12-small {
+			flex: 1 1 100%;
+			max-width: 100%;
+		}
+	}
+	
